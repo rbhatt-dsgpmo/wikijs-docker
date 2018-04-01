@@ -62,8 +62,6 @@ git:
   branch: master
   auth:
     type: ssh
-    username: marty
-    password: MartyMcFly88
     privateKey: /var/wiki/keys/git.pem
     sslVerify: true
   showUserEmail: true
