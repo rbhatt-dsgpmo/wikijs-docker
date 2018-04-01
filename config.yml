@@ -70,7 +70,7 @@ git:
   serverEmail: $(WIKI_ADMIN_EMAIL)
 features:
   linebreaks: true
-  mathjax: true
+  mathjax: false
 externalLogging:
   bugsnag: false
   loggly: false
