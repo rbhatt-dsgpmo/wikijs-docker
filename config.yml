@@ -1,0 +1,87 @@
+title: $(TITLE)
+host: $(HOST)
+port: $(PORT)
+paths:
+  repo: ./repo
+  data: ./data
+uploads:
+  maxImageFileSize: 3
+  maxOtherFileSize: 100
+lang: en
+langRtl: false
+public: true
+auth:
+  defaultReadAccess: false
+  local:
+    enabled: true
+  google:
+    enabled: false
+    clientId: GOOGLE_CLIENT_ID
+    clientSecret: GOOGLE_CLIENT_SECRET
+  microsoft:
+    enabled: false
+    clientId: MS_APP_ID
+    clientSecret: MS_APP_SECRET
+  facebook:
+    enabled: false
+    clientId: FACEBOOK_APP_ID
+    clientSecret: FACEBOOK_APP_SECRET
+  github:
+    enabled: false
+    clientId: GITHUB_CLIENT_ID
+    clientSecret: GITHUB_CLIENT_SECRET
+  slack:
+    enabled: false
+    clientId: SLACK_CLIENT_ID
+    clientSecret: SLACK_CLIENT_SECRET
+  ldap:
+    enabled: false
+    url: 'ldap://serverhost:389'
+    bindDn: cn='root'
+    bindCredentials: BIND_PASSWORD
+    searchBase: 'o=users,o=example.com'
+    searchFilter: '(uid={{username}})'
+    tlsEnabled: false
+    tlsCertPath: 'C:\example\root_ca_cert.crt'
+  azure:
+    enabled: false
+    clientId: APP_ID
+    clientSecret: APP_SECRET_KEY
+    resource: 00000002-0000-0000-c000-000000000000
+    tenant: YOUR_TENANT.onmicrosoft.com
+  oauth2:
+    enabled: false
+    clientId: OAUTH2_CLIENT_ID
+    clientSecret: OAUTH2_CLIENT_SECRET
+    authorizationURL: OAUTH2_AUTH_URL
+    tokenURL: OAUTH2_TOKEN_URL
+sessionSecret: 492493e5eaf8c74c0966d4ba0b96130871ccf9f7a71fdcf278ae2ae123e0c8d1
+db: mongodb://$(MONGO_HOST):27017/wiki
+git:
+  url: $(GIT_URL)
+  branch: master
+  auth:
+    type: ssh
+    username: marty
+    password: MartyMcFly88
+    privateKey: /var/wiki/keys/git.pem
+    sslVerify: true
+  showUserEmail: true
+  serverEmail: $(WIKI_ADMIN_EMAIL)
+features:
+  linebreaks: true
+  mathjax: true
+externalLogging:
+  bugsnag: false
+  loggly: false
+  papertrail: false
+  rollbar: false
+  sentry: false
+theme:
+  primary: indigo
+  alt: blue-grey
+  viewSource: all
+  footer: blue-grey
+  code:
+    dark: true
+    colorize: true
